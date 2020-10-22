@@ -1,0 +1,9 @@
+india/New Delhi
+china/Beijing
+france/Paris
+argentina/Buenos Aires
+egypt/Cairo
+japan/Tokyo
+brazil/Brasilia
+canada/Ottawa
+thailand/Bangkok

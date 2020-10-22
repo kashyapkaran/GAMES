@@ -1,7 +1,7 @@
 '''in the list 'a' you can put words or numbers and it will sort it!!!'''
 
 
-a = [5,6,2,7,4,3,6]
+a = [5,6,2,"frie",4,3,6]
 
 for j in range(1,len(a)):
     print(str(j))
