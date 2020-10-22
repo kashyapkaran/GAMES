@@ -1,6 +1,5 @@
 #flappy bird (with sound effects!)
 import pygame,sys,random
-from pygame.constants import MOUSEBUTTONDOWN
 
 
 def draw_floor():

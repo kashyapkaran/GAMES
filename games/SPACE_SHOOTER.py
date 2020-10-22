@@ -162,7 +162,7 @@ def main():
     wave_length = 5
     enemy_vel = 1
     
-    player_vel = 7
+    player_vel = 9
     laser_vel = 7
     
     player = Player(300, 600)
@@ -187,10 +187,11 @@ def main():
         player.draw(WIN)
         
         if lost:
-            lost_label = lost_font.render("You Lost!!",1, (255,255,255))
+            lost_label = lost_font.render("You lose!!",1, (255,255,255))
             WIN.blit(lost_label, (WIDTH/2 - lost_label.get_width()/2, 350))
          
         pygame.display.update()
+
 
     
     while run:
@@ -243,6 +244,8 @@ def main():
             
         if keys[pygame.K_DOWN] and player.y + player_vel + player.get_hight() +15 < HEIGHT:#down
             player.y += player_vel
+            
+            
             
         #shoot laser
         if keys[pygame.K_SPACE]:

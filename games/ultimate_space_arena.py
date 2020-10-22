@@ -1,7 +1,7 @@
-#part-16(enemy types)
-#https://youtu.be/5n8h3ujIlA4?t=986
 
-import turtle,math,random
+
+import turtle
+import math,random,time
 
 SCREEN_WIDTH=800
 SCREEN_HEIGHT=600
@@ -10,16 +10,18 @@ wn = turtle.Screen()
 wn.setup(SCREEN_WIDTH + 220,SCREEN_HEIGHT + 20)
 wn.title("Space Arena! by Karan")
 wn.bgcolor("black")
-wn.tracer(0)
+
+turtle.register_shape("ship.gif")
+turtle.register_shape("bg_enemy.gif")
+turtle.register_shape("bg_laser.gif")
 
 #pen
 pen = turtle.Turtle()
 pen.speed(0)
-pen.shape("square")
+pen.shape("arrow")
 pen.color("white")
-pen.penup()
 pen.hideturtle()
-
+pen.penup()
 
 
 class Game():
@@ -27,6 +29,7 @@ class Game():
         self.width = width
         self.height = height
         self.level = 1
+        self.state = "splash"
         
     def start_level(self):
         sprites.clear()
@@ -100,6 +103,9 @@ class Game():
         character_pen.draw_string(pen,"ENEMIES {}".format(active_enemies),400 ,210 )
         character_pen.draw_string(pen,"LIVES {}".format(player.lives), 400 ,180 )
         character_pen.draw_string(pen,"LEVEL {}".format(game.level),400 ,150 )
+        
+    def start(self):
+        self.state = "playing" 
         
 class CharacterPen():
     def __init__(self, color = "white", scale = 1.0):
@@ -175,8 +181,93 @@ class CharacterPen():
                 xy = self.characters[character][i]
                 pen.goto(x + xy[0] * scale, y + xy[1] * scale)
             pen.penup()
-                
+            
+
+#splash screen                
 character_pen = CharacterPen("red", 3.0)
+character_pen.draw_string(pen, "SPACE ARENA", 0, 160)
+
+character_pen.scale = 1.0
+character_pen.draw_string(pen, "BY KARAN KASHYAP", 0, 100)
+
+pen.color("white")
+pen.shape("triangle")
+pen.goto(-150, 20)
+pen.stamp()
+
+character_pen.draw_string(pen,"player", -150,-20)
+
+pen.color("orange")
+pen.shape("square")
+pen.goto(0, 20)
+pen.stamp()
+character_pen.draw_string(pen, "Enemy", 0, -20)
+
+pen.color("blue")
+pen.shape("circle")
+pen.goto(150, 20)
+pen.stamp() 
+character_pen.draw_string(pen,"Powerup",150,-20)
+
+character_pen.draw_string(pen,"Up Arrow",-100,-60)
+character_pen.draw_string(pen,"Accelerate",100,-60)
+
+character_pen.draw_string(pen,"Left Arrow",-100,-100)
+character_pen.draw_string(pen,"Rotate Left",100,-100)
+
+character_pen.draw_string(pen,"Right Arrow",-100,-140)
+character_pen.draw_string(pen,"Rotate Right",100,-140)
+
+character_pen.draw_string(pen,"Space",-100,-180)
+character_pen.draw_string(pen,"Fire",100,-180)
+
+character_pen.draw_string(pen,"c key",-100,-220)
+character_pen.draw_string(pen,"clear bullets",100,-220)
+
+#start screen ship image
+pen.shape("ship.gif")
+pen.shapesize(10,10)
+pen.goto(-400, -120)
+pen.left(90)
+pen.stamp()
+
+pen.shape("ship.gif")
+pen.shapesize(10,10)
+pen.goto(400, -120)
+pen.left(90)
+pen.stamp()
+
+#start screen enemy image
+pen.shape("bg_enemy.gif")
+pen.shapesize(6,6)
+pen.goto(-400, 120)
+pen.left(90)
+pen.stamp()
+
+pen.shape("bg_enemy.gif")
+pen.shapesize(6,6)
+pen.goto(400, 120)
+pen.left(90)
+pen.stamp()
+
+#start screen laser image
+pen.shape("bg_laser.gif")
+pen.shapesize(6,6)
+pen.goto(-400, 0)
+pen.left(90)
+pen.stamp()
+
+pen.shape("bg_laser.gif")
+pen.shapesize(6,6)
+pen.goto(400, 0)
+pen.left(90)
+pen.stamp()
+
+character_pen.scale = 1.3
+character_pen.draw_string(pen,"PRESS S TO START",0,-270)
+
+
+wn.tracer(0)
 
 
 class Sprite():
@@ -596,6 +687,9 @@ wn.onkeyrelease(player.stop_rotation,"Right")
 wn.onkeypress(player.accelerate,"Up")
 wn.onkeyrelease(player.decelerate,"Up")
 
+wn.onkeypress(game.start, "s")
+wn.onkeypress(game.start, "S")
+
 for missile in missiles: 
     wn.onkeypress(missile.missile_destruction,"c")
     
@@ -603,64 +697,71 @@ wn.onkeypress(player.fire,"space")
 
 #main loop
 while True:
-    #clear screen
-    pen.clear()
     
-    #do game stuff
-    #update sprites
-    for sprite in sprites:
-        sprite.update()
+    #splash
+    if game.state == "splash":
+        wn.update()
+    
+    #main game
+    elif game.state == "playing":
+        #clear screen
+        pen.clear()
         
-    for sprite in sprites:
-        if isinstance(sprite,Enemy) and sprite.state == "active":
-            if player.is_collision(sprite):
-                sprite.health -= 10
-                player.health -= 10
-                player.bounce(sprite)
-                
-            for missile in missiles:    
-                if missile.state == "active" and missile.is_collision(sprite):
-                    sprite.health -= 10
-                    missile.reset()
-
-                
-        if isinstance(sprite, Powerup):
-            if player.is_collision(sprite):
-                sprite.x = 100
-                sprite.y = 100
+        #do game stuff
+        #update sprites
+        for sprite in sprites:
+            sprite.update()
             
-            for missile in missiles:
-                if missile.state == "active" and missile.is_collision(sprite):
+        for sprite in sprites:
+            if isinstance(sprite,Enemy) and sprite.state == "active":
+                if player.is_collision(sprite):
+                    sprite.health -= 10
+                    player.health -= 10
+                    player.bounce(sprite)
+                    
+                for missile in missiles:    
+                    if missile.state == "active" and missile.is_collision(sprite):
+                        sprite.health -= 10
+                        missile.reset()
+    
+                    
+            if isinstance(sprite, Powerup):
+                if player.is_collision(sprite):
                     sprite.x = 100
-                    sprite.y = -100
-                    missile.reset()
-
+                    sprite.y = 100
+                
+                for missile in missiles:
+                    if missile.state == "active" and missile.is_collision(sprite):
+                        sprite.x = 100
+                        sprite.y = -100
+                        missile.reset()
     
-    #render sprites
-    for sprite in sprites:
-        sprite.render(pen, camera.x + 100, camera.y)
         
-    game.render_boder(pen, camera.x + 100, camera.y)
-    
-    #check for end of level
-    end_of_level = True
-    for sprite in sprites: 
-        #look for an active enemy
-        if isinstance(sprite, Enemy) and sprite.state == "active":
-            end_of_level = False
-    
-    if end_of_level:
-        game.level += 1
-        game.start_level()
+        #render sprites
+        for sprite in sprites:
+            sprite.render(pen, camera.x + 100, camera.y)
+            
+        game.render_boder(pen, camera.x + 100, camera.y)
         
-    #update the camera
-    camera.update(player.x, player.y)
-    
-    #draw text
-    game.render_info(pen, 0, 0)
-    
-    #render the radar
-    radar.render(pen, sprites)
-     
-#update the screen
-    wn.update()
+        #check for end of level
+        end_of_level = True
+        for sprite in sprites: 
+            #look for an active enemy
+            if isinstance(sprite, Enemy) and sprite.state == "active":
+                end_of_level = False
+        
+        if end_of_level:
+            game.level += 1
+            game.start_level()
+            
+        #update the camera
+        camera.update(player.x, player.y)
+        
+        #draw text
+        game.render_info(pen, 0, 0)
+        
+        #render the radar
+        radar.render(pen, sprites)
+         
+    #update the screen
+        wn.update()
