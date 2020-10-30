@@ -1,4 +1,4 @@
-import turtle,random,sys
+import turtle,random,time
 
 
 wn = turtle.Screen()
@@ -7,7 +7,7 @@ wn.title("dodge it!")
 wn.setup(width=600,height=600)
 wn.tracer(0)
 
-lives = 3
+lives = 10
 
 
 #function
@@ -56,33 +56,33 @@ pen.write("Lives:{}".format(lives), align="center",font=font)
 wn.listen()
 wn.onkeypress(go_left,"Left")
 wn.onkeypress(go_right,"Right")
-
-#main game loop
-while True:
-    
+def main():
+    global lives
+    #main game loop
+    while True:
         wn.update()
         if player.direction == "left":
             x = player.xcor()
             x -= 3
             player.setx(x)
-            
+
         if player.direction == "right":
             x = player.xcor()
             x += 3
             player.setx(x)
-            
+
         #move the enemies
-        for enemy in enemies:    
+        for enemy in enemies:
             y = enemy.ycor()
             y-= enemy.speed
             enemy.sety(y)
-        
+
         #check if of the screen
             if y < -300:
                 x = random.randint(-290,290)
                 y = random.randint(200,300)
                 enemy.goto(x,y)
-            
+
             #check for collision
             if enemy.distance(player) < 20:
                 x = random.randint(-290,290)
@@ -91,12 +91,14 @@ while True:
                 lives -= 1
                 pen.clear()
                 pen.write("Lives:{}".format(lives), align="center",font=font)
-            
-        if lives == 0 :
-            pen.clear()
-            pen.write("GAME OVER,Please close the window ".format(), align="center",font=font)
-            break
-            
-        
 
+        if lives <= 0:
+            pen.clear()
+            pen.write("GAME OVER! ".format(), align="center",font=font)
+            time.sleep(3)
+            lives = 10
+            main()
+
+
+main()
 wn.mainloop()

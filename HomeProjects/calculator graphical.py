@@ -5,15 +5,31 @@ import tkinter
 root = tkinter.Tk()
 root.title("Calculator")
 
+expression = ""
+
 #create functions
 def add(value):
-    print(value)
+    global expression
+    expression += value
+    label_result.config(text=expression)
 
 
 def clear():
-    pass
+    global expression
+    expression = ""
+    label_result.config(text=expression)
+
+
 def calculate():
-    pass
+    global expression
+    result = ""
+    if expression != "":
+        try:
+            result = eval(expression)
+        except:
+            result = "error"
+            expression = ""
+    label_result.config(text=result)
 
 #gui's
 #row is side-by-by, column is up to down and 0,0 is top left corner like in pygame.
@@ -72,6 +88,8 @@ button_add.grid(row=4, column=3)
 
 button_equals = tkinter.Button(root, text="=",height=2,width=24,command=lambda: calculate())
 button_equals.grid(row=5, column=0, columnspan=4)
+
+
 
 
 root.mainloop()
