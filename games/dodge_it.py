@@ -31,6 +31,7 @@ player.direction = "stop"
 enemies = []
 
 #create enemies
+
 for _ in range(10):
     enemy = turtle.Turtle()
     enemy.shape("square")
@@ -40,7 +41,8 @@ for _ in range(10):
     enemy.goto(0,250)
     enemy.speed = random.randint(1,4)
     enemies.append(enemy)
-    
+
+
 #create pen
 pen = turtle.Turtle()
 pen.hideturtle()
@@ -96,7 +98,10 @@ def main():
             pen.clear()
             pen.write("GAME OVER! ".format(), align="center",font=font)
             time.sleep(3)
+            pen.clear()
             lives = 10
+            pen.write("Lives:{}".format(lives), align="center", font=font)
+
             main()
 
 

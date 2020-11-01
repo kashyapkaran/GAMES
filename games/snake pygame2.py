@@ -1,20 +1,78 @@
-#https://youtu.be/QFvqStqPCRU?t=4057
+#https://youtu.be/QFvqStqPCRU?t=5249
 
 import pygame,sys,random
 from pygame.math import Vector2
 
 class SNAKE:
     def __init__(self):
-        self.body = [Vector2(5,10),Vector2(6,10),Vector2(7,10)]
+        self.body = [Vector2(5,10),Vector2(4,10),Vector2(3,10)]
         self.direction = Vector2(1,0)
         self.new_block = False
 
+        self.head_up = pygame.image.load('Snake-main/Graphics/head_up.png').convert_alpha()
+        self.head_up = pygame.transform.scale(self.head_up, (30, 30))
+        self.head_down = pygame.image.load('Snake-main/Graphics/head_down.png').convert_alpha()
+        self.head_down = pygame.transform.scale(self.head_down, (30, 30))
+        self.head_right = pygame.image.load('Snake-main/Graphics/head_right.png').convert_alpha()
+        self.head_right = pygame.transform.scale(self.head_right, (30, 30))
+        self.head_left = pygame.image.load('Snake-main/Graphics/head_left.png').convert_alpha()
+        self.head_left = pygame.transform.scale(self.head_left, (30, 30))
+
+        self.tail_up = pygame.image.load('Snake-main/Graphics/tail_up.png').convert_alpha()
+        tail_up = pygame.transform.scale(self.tail_up, (30, 30))
+        self.tail_down = pygame.image.load('Snake-main/Graphics/tail_down.png').convert_alpha()
+        tail_down = pygame.transform.scale(self.tail_down, (30, 30))
+        self.tail_right = pygame.image.load('Snake-main/Graphics/tail_right.png').convert_alpha()
+        tail_right = pygame.transform.scale(self.head_right, (30, 30))
+        self.tail_left = pygame.image.load('Snake-main/Graphics/tail_left.png').convert_alpha()
+        tail_left = pygame.transform.scale(self.head_left, (30, 30))
+
+        self.body_vertical = pygame.image.load('Snake-main/Graphics/body_vertical.png').convert_alpha()
+        self.body_vertical = pygame.transform.scale(self.body_vertical, (30, 30))
+        self.body_horizontal = pygame.image.load('Snake-main/Graphics/body_horizontal.png').convert_alpha()
+        self.body_horizontal = pygame.transform.scale(self.body_horizontal, (30, 30))
+
+        self.body_tr = pygame.image.load('Snake-main/Graphics/body_tr.png').convert_alpha()
+        self.body_tr = pygame.transform.scale(self.body_tr, (30, 30))
+        self.body_tl = pygame.image.load('Snake-main/Graphics/body_tl.png').convert_alpha()
+        self.body_tl = pygame.transform.scale(self.body_tl, (30, 30))
+        self.body_br = pygame.image.load('Snake-main/Graphics/body_br.png').convert_alpha()
+        self.body_br = pygame.transform.scale(self.body_br, (30, 30))
+        self.body_bl = pygame.image.load('Snake-main/Graphics/body_bl.png').convert_alpha()
+        self.body_bl = pygame.transform.scale(self.body_bl, (30, 30))
+        self.crunch_sound = pygame.mixer.Sound('Snake-main/Sound/crunch.wav')
+
+
+
     def draw_snake(self):
-        for block in self.body:
+
+        for index,block in enumerate(self.body):
+            #1.we still need a rect for the positioning
             x_pos = int(block.x * cell_size)
             y_pos = int(block.y * cell_size)
             block_rect = pygame.Rect(x_pos,y_pos,cell_size,cell_size)
-            pygame.draw.rect(screen,(183,111,122),block_rect)
+            print("draw snake index: "+str(index))
+            #2. what direction is the face heading
+            if index == 0:
+                 screen.blit(self.head_left,block_rect)
+
+            else:
+                 pygame.draw.rect(screen,(150,100,100),block_rect)
+
+
+
+
+    def update_head_graphics(self):
+        head_relation = self.body[1] - self.body[0]
+        if head_relation == Vector2(1, 0):self.head = self.head_left
+        elif head_relation == Vector2(-1, 0):
+            self.head = self.head_right
+            print("turning head right")
+        elif head_relation == Vector2(0, 1):self.head = self.head_up
+        elif head_relation == Vector2(0, -1):self.head = self.head_down
+        print(head_relation)
+
+
 
     def move_snake(self):
         if self.new_block == True:
@@ -39,7 +97,8 @@ class FRUIT:
 
     def draw_fruit(self):
         fruit_rect = pygame.Rect(int(self.pos.x * cell_size),int(self.pos.y * cell_size) , cell_size, cell_size)
-        pygame.draw.rect(screen,(126,166,114),fruit_rect)
+        screen.blit(apple,fruit_rect)
+        #pygame.draw.rect(screen,(126,166,114),fruit_rect)
 
     def randomize(self):
         self.x = random.randint(0,cell_number - 1)
@@ -54,6 +113,7 @@ class MAIN:
     def update(self):
         self.snake.move_snake()
         self.check_collision()
+        self.check_fail()
 
     def draw_elements(self):
         self.fruit.draw_fruit()
@@ -65,7 +125,16 @@ class MAIN:
             self.snake.add_block()
 
     def check_fail(self):
-        pass
+        if not 0 <= self.snake.body[0].x < cell_number or not 0 <= self.snake.body[0].y < cell_number:
+            self.game_over()
+
+        for block in self.snake.body[1:]:
+            if block == self.snake.body[0]:
+                self.game_over()
+
+    def game_over(self):
+        pygame.quit()
+        sys.exit()
 
 pygame.init()
 cell_size=30
@@ -73,6 +142,8 @@ cell_number=20
 screen = pygame.display.set_mode((cell_number * cell_size, cell_number * cell_size))
 clock = pygame.time.Clock()
 
+apple = pygame.image.load('Snake-main/Graphics/apple.png').convert_alpha()
+apple = pygame.transform.scale(apple, (30, 30))
 
 SCREEN_UPDATE = pygame.USEREVENT
 
@@ -91,17 +162,23 @@ while True:
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP:
-                main_game.snake.direction = Vector2(0,-1)
+                if main_game.snake.direction.y != 1:
+                    main_game.snake.direction = Vector2(0,-1)
 
             if event.key == pygame.K_RIGHT:
-                main_game.snake.direction = Vector2(1,0)
+                if main_game.snake.direction.x != -1:
+                    main_game.snake.direction = Vector2(1,0)
 
             if event.key == pygame.K_DOWN:
-                main_game.snake.direction = Vector2(0,1)
+                if main_game.snake.direction.y != -1:
+                    main_game.snake.direction = Vector2(0,1)
+
 
             if event.key == pygame.K_LEFT:
-                main_game.snake.direction = Vector2(-1,0)
+                if main_game.snake.direction.x != 1:
+                    main_game.snake.direction = Vector2(-1,0)
 
+    #main_game.snake.update_head_graphics()
     screen.fill((175,215,70))
     main_game.draw_elements()
     pygame.display.update()
