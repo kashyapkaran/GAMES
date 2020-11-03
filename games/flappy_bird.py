@@ -68,7 +68,7 @@ def update_score(score,high_score):
     return high_score
 
 
-pygame.mixer.pre_init(frequency=44100, size=16, channels=1, buffer=512)
+pygame.mixer.pre_init(frequency=44100, size=16, channels=1, buffer=256)
 pygame.init()
 pygame.display.set_caption('Flappy bird by Karan')
 screen = pygame.display.set_mode((288,512))
@@ -97,8 +97,6 @@ bird_rect = bird_surface.get_rect(center = (50,256))
 
 BIRDFLAP = pygame.USEREVENT + 1
 pygame.time.set_timer(BIRDFLAP,200)
-
-
 
 
 pipe_surface =  pygame.image.load('FlappyBird_Python-master/assets/pipe-green.png').convert()
