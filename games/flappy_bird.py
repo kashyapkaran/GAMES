@@ -68,7 +68,7 @@ def update_score(score,high_score):
     return high_score
 
 
-pygame.mixer.pre_init(frequency=44100, size=16, channels=1, buffer=256)
+#pygame.mixer.pre_init(frequency=44100, size=16, channels=2, buffer=1024)
 pygame.init()
 pygame.display.set_caption('Flappy bird by Karan')
 screen = pygame.display.set_mode((288,512))
