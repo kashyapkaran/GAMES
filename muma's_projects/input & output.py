@@ -1,4 +1,4 @@
 ui = input('hello')
 if ui != None:
-    for x in range(7):
+    for _ in range(10):
         print(ui)

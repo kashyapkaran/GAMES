@@ -1,0 +1,123 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/player.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 97.3391, 2.11014 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 562.758, 27.5303 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 30.7422, 284.033 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 18.6956, 524.877 )
+
+[node name="level" type="Node2D"]
+
+[node name="paddle" type="StaticBody2D" parent="."]
+position = Vector2( 62.8579, 172.859 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paddle"]
+position = Vector2( 292.963, 206.533 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="paddle"]
+position = Vector2( 292.189, 205.411 )
+scale = Vector2( 3.85105, 0.551015 )
+texture = ExtResource( 2 )
+
+[node name="paddle2" type="StaticBody2D" parent="."]
+position = Vector2( 914.953, 317.543 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paddle2"]
+position = Vector2( 520.651, 169.763 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="paddle2"]
+position = Vector2( 522.706, 177.127 )
+scale = Vector2( 3.85105, 0.551015 )
+texture = ExtResource( 2 )
+
+[node name="paddle3" type="StaticBody2D" parent="."]
+position = Vector2( 1206.59, 127.001 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paddle3"]
+position = Vector2( 520.651, 169.763 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="paddle3"]
+position = Vector2( 522.706, 177.127 )
+scale = Vector2( 3.85105, 0.551015 )
+texture = ExtResource( 2 )
+
+[node name="paddle4" type="StaticBody2D" parent="."]
+position = Vector2( 1445.34, -22.3025 )
+rotation = -0.014001
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paddle4"]
+position = Vector2( 520.651, 169.763 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="paddle4"]
+position = Vector2( 522.706, 177.127 )
+scale = Vector2( 3.85105, 0.551015 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1483.33, -2.92081 )
+rotation = -0.014001
+scale = Vector2( 3.85105, 0.551015 )
+texture = ExtResource( 2 )
+
+[node name="floor" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="floor"]
+position = Vector2( 489.828, 572.578 )
+scale = Vector2( 22.1967, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+modulate = Color( 0.14902, 0.172549, 0.231373, 1 )
+position = Vector2( 496.482, 575.575 )
+shape = SubResource( 2 )
+
+[node name="wall left" type="StaticBody2D" parent="."]
+position = Vector2( 17.9594, 15.7145 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall left"]
+position = Vector2( -2.24493, 276.873 )
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="wall left"]
+position = Vector2( -0.98645, 267.272 )
+scale = Vector2( 0.827384, 10.6449 )
+texture = ExtResource( 2 )
+
+[node name="roof" type="StaticBody2D" parent="."]
+position = Vector2( 17.9594, 15.7145 )
+
+[node name="Sprite" type="Sprite" parent="roof"]
+position = Vector2( 502.446, -20.3102 )
+rotation = 1.57117
+scale = Vector2( 0.827384, 20.5937 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="roof"]
+position = Vector2( 499.207, -21.7785 )
+rotation = 4.70596
+shape = SubResource( 4 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 569.851, 513.488 )

@@ -1,0 +1,15 @@
+how to add a module using pycharm
+_______________________________________________________________________________________________
+go to file
+
+then settings
+
+the project:name_of_project
+
+python interupter
+
+somewhere on the top right corrner will be a plus sign
+
+search the modue you want to download
+
+then install it!

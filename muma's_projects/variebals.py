@@ -1,8 +1,7 @@
-v = 12345
+v = 2
 
-d = 87654321
+d = False
 
-q = 23456654323456
+q = v * d
 
-if v < d or q < v:
-    print("v is greater than d")
+print(v + 1)

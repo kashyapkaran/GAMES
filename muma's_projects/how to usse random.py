@@ -2,5 +2,5 @@ import random
 
 a=["rock","paper","scissors"]
 
-randam_a=random.choice(a)
-print(randam_a)
+random_a =random.choice(a)
+print(random_a)
