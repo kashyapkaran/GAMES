@@ -1,0 +1,1 @@
+use the $ thing in godot and try to move the player.

@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scn/main menu.gd" type="Script" id=1]
+
+[node name="main menu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 436.954
+margin_top = 316.955
+margin_right = 534.954
+margin_bottom = 348.955
+text = "play!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 452.227
+margin_top = 216.955
+margin_right = 519.227
+margin_bottom = 230.955
+text = "fps game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
