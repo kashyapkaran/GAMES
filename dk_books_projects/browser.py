@@ -1,8 +1,6 @@
 #page 60
 import webbrowser
 
-
-
 def search():
     w = True
     while w:

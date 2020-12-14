@@ -88,8 +88,8 @@ floor_surface = pygame.image.load('FlappyBird_Python-master/assets/base.png').co
 floor_x_pos = 0
 
 bird_downflap = pygame.image.load('FlappyBird_Python-master/assets/yellowbird-downflap.png').convert_alpha()
-bird_midflap = pygame.image.load('FlappyBird_Python-master/assets/yellowbird-midflap.png').convert_alpha()
-bird_upflap = pygame.image.load('FlappyBird_Python-master/assets/yellowbird-upflap.png').convert_alpha()
+bird_midflap = pygame.image.load('FlappyBird_Python-master/assets/redbird-midflap.png').convert_alpha()
+bird_upflap = pygame.image.load('FlappyBird_Python-master/assets/bluebird-upflap.png').convert_alpha()
 bird_frames = [bird_downflap,bird_midflap,bird_upflap,bird_midflap]
 bird_index = 0
 bird_surface = bird_frames[bird_index]

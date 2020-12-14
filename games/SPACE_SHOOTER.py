@@ -1,4 +1,3 @@
-                    
 
 import pygame,os,time,random
 pygame.font.init()

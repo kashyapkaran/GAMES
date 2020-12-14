@@ -1,7 +1,6 @@
 #part - 7(scoring),time - 0:00
 #url down below
 
-
 import turtle,time,random
 
 delay =  0.1

@@ -7,15 +7,15 @@ WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("space shooter")
 
 # load images
-RED_SPACE_SHIP = pygame.image.load(os.path.join('enemy.png'))
+RED_SPACE_SHIP = pygame.image.load(os.path.join('t enemy.png'))
 RED_SPACE_SHIP = pygame.transform.scale(RED_SPACE_SHIP, (50,50))
 RED_SPACE_SHIP.set_colorkey((255,255,255))
 
-GREEN_SPACE_SHIP = pygame.image.load(os.path.join('enemy.png'))
+GREEN_SPACE_SHIP = pygame.image.load(os.path.join('t enemy.png'))
 GREEN_SPACE_SHIP = pygame.transform.scale(GREEN_SPACE_SHIP, (50,50))
 GREEN_SPACE_SHIP.set_colorkey((255,255,255))
 
-BLUE_SPACE_SHIP =  pygame.image.load(os.path.join('enemy.png'))
+BLUE_SPACE_SHIP =  pygame.image.load(os.path.join('t enemy.png'))
 BLUE_SPACE_SHIP = pygame.transform.scale(BLUE_SPACE_SHIP, (50,50))
 BLUE_SPACE_SHIP.set_colorkey((255,255,255))
 

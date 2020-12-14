@@ -29,6 +29,3 @@ wn.onkeypress(orange, "2")
 wn.onscreenclick(pen.setpos)
 
 wn.mainloop()
-
-
-    

@@ -1,9 +1,6 @@
 from tkinter import Tk, simpledialog, messagebox
 import tkinter
 
-
-
-
 root = tkinter.Tk()
 root.withdraw()
 
@@ -40,5 +37,3 @@ root.mainloop()
 
 
 print("ask the expert - capital cities of the world")
-
-
