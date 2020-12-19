@@ -7,3 +7,4 @@ japan/Tokyo
 brazil/Brasilia
 canada/Ottawa
 thailand/Bangkok
+malta/Valletta

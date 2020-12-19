@@ -14,16 +14,16 @@ screen = pygame.display.set_mode(WINDOW_SIZE,0,32)
 
 display = pygame.Surface((300, 200))
 
-grass_image = pygame.image.load('platformer game assets/flatboy/platformer_project_2/grass.png')
+grass_image = pygame.image.load('platformer game assets/flatboy/platformer game assets/grass.png')
 TILE_SIZE = grass_image.get_width()
-dirt_image = pygame.image.load('platformer game assets/flatboy/platformer_project_2/dirt.png')
+dirt_image = pygame.image.load('platformer game assets/flatboy/platformer game assets/dirt.png')
 
-jump_sound = pygame.mixer.Sound('platformer game assets/flatboy/platformer_project_2/jump.wav')
+jump_sound = pygame.mixer.Sound('platformer game assets/flatboy/platformer game assets/jump.wav')
 grass_sound = [pygame.mixer.Sound('grass_0.wav'),pygame.mixer.Sound('grass_1.wav')]
 grass_sound[0].set_volume(0.2)
 grass_sound[1].set_volume(0.2)
 
-pygame.mixer.music.load('platformer game assets/flatboy/platformer_project_2/music.wav')
+pygame.mixer.music.load('platformer game assets/flatboy/platformer game assets/music.wav')
 pygame.mixer.music.play(-1)
 
 def load_map(path):
@@ -65,8 +65,8 @@ def change_animtion(action_var,frame,new_value):
 
 animation_database = {}
 
-animation_database['run'] = load_animation('platformer game assets/flatboy/platformer_project_2/player_animations/run',[7,7])
-animation_database['idle'] = load_animation('platformer game assets/flatboy/platformer_project_2/player_animations/idle',[7,7,40])
+animation_database['run'] = load_animation('platformer game assets/flatboy/platformer game assets/player_animations/run',[7,7])
+animation_database['idle'] = load_animation('platformer game assets/flatboy/platformer game assets/player_animations/idle',[7,7,40])
 
 player_action = 'idle'
 player_frame = 0
@@ -74,7 +74,7 @@ player_flip = False
 
 grass_sound_timer = 0
 
-game_map = load_map('platformer game assets/flatboy/platformer_project_2/map')
+game_map = load_map('platformer game assets/flatboy/platformer game assets/map')
 
 def collision_test(rect, tiles):
     hit_list = []

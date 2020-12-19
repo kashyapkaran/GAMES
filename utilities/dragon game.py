@@ -1,7 +1,7 @@
 import pygame ,os ,time ,random
 pygame.font.init()
-
-
+pygame.init()
+pygame.mixer.set_num_channels(64)
 WIDTH, HEIGHT = 700, 700
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("space shooter")
@@ -23,7 +23,7 @@ BLUE_SPACE_SHIP.set_colorkey((255,255,255))
 
 #YELLOW_SPACE_SHIP = pygame.image.load(os.path.join('assets','pixel_ship_yellow.png'))
 
-YELLOW_SPACE_SHIP = pygame.image.load(os.path.join('dragon.png'))
+YELLOW_SPACE_SHIP = pygame.image.load(os.path.join('tdragon.png'))
 YELLOW_SPACE_SHIP = pygame.transform.scale(YELLOW_SPACE_SHIP, (150,150))
 
 
@@ -36,7 +36,14 @@ YELLOW_LASER = pygame.image.load(os.path.join("fireball.png"))
 # background
 BG = pygame.transform.scale(pygame.image.load(os.path.join('background.png')) ,(WIDTH ,HEIGHT))
 
+#sounds
+explosion_sound = pygame.mixer.Sound('explosion2.wav')
+shoot_sound = pygame.mixer.Sound('2fire ball.wav')
+shoot_sound.set_volume(0.07)
 
+# pygame.mixer.music.load('dragon game theme song.wav')
+# pygame.mixer.music.play(-1)
+# pygame.mixer.music.set_volume(0.5)
 class Laser:
     def __init__(self, x, y, img):
         self.x = x
@@ -122,6 +129,7 @@ class Player(Ship):
                     if laser.collision(obj):
                         objs.remove(obj)
                         self.lasers.remove(laser)
+                        explosion_sound.play()
 
     def draw(self, window):
         super().draw(window)
@@ -180,6 +188,10 @@ def main():
     clock = pygame.time.Clock()
     lost = False
     lost_count = 0
+
+    # pygame.mixer.music.load('dragon game theme song.wav')
+    # pygame.mixer.music.play(-1)
+    # pygame.mixer.music.set_volume(0.5)
 
     def redraw_window():
         WIN.blit(BG, (0, 0))
@@ -255,6 +267,7 @@ def main():
         # shoot laser
         if keys[pygame.K_SPACE]:
             player.shoot()
+            shoot_sound.play()
 
         for enemy in enemies[:]:
             enemy.move(enemy_vel)

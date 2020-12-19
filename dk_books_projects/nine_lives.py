@@ -40,5 +40,3 @@ if guessed_word_correctly:
     
 else:
     print("you lost! the secret word was "+ secret_word)
-
-

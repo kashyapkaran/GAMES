@@ -11,7 +11,7 @@ def search():
             webbrowser.open("www.youtube.com")
             
         elif ui == "quit":
-            break
+            w = False
         
         elif ui == "python projects book" or ui == "ppb":
             webbrowser.get("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s").open("file:///C:/karan/python%20books/Coding%20Projects%20in%20Python%20.pdf")
@@ -63,7 +63,7 @@ def search():
                 webbrowser.get("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s").open(ui)    
                 
     
-        search()
+
     
 search()
         
