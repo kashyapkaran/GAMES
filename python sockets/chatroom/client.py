@@ -1,5 +1,5 @@
 import socket# url - https://youtu.be/3UOyky9sEQY
-import threading
+import threading#mushroom
 
 nickname = input('Choose a nickname: ')
 
