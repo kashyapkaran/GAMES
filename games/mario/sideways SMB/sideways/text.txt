@@ -1,0 +1,15 @@
+endingtextcolor=255,255,255
+endingcolorname=white
+endingtext=thats it for now!,more coming soon!
+playername=donut
+hudtextcolor=255,255,255
+hudcolorname=white
+hudvisible=true
+hudworldletter=true
+hudoutline=false
+hudsimple=false
+toadtext=thank you mario!,but our princess is in,another castle!
+peachtext=thank you mario!,your quest is over.,we present you a new quest.,push button b,to play as steve
+steve=true
+levelscreen=1|1|don't forget about those portals!,10|1|secret level!!
+hudhidecollectables=f,f,f,f,f,f,f,f,f,f

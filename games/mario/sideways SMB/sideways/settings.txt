@@ -1,0 +1,5 @@
+name=sideways smb
+author=bdgamer
+description=the classic levelsA but sideways! portal gun needed
+lives=0
+camera=2

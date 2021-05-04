@@ -1,0 +1,548 @@
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:Temp/Assembly-CSharp.dll
+-unsafe
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEditor.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/Managed/UnityEditor.Graphs.dll"
+-r:"C:/karan/unity editor folder/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll"
+-r:C:/Users/Ruchi/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll
+-r:C:/Users/Ruchi/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll
+-r:C:/Users/Ruchi/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll
+-r:C:/Users/Ruchi/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll
+-r:C:/Users/Ruchi/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll
+-r:C:/Users/Ruchi/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll
+-r:C:/Users/Ruchi/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_2017_1_OR_NEWER
+-define:UNITY_2017_2_OR_NEWER
+-define:UNITY_2017_3_OR_NEWER
+-define:UNITY_2017_3_0
+-define:UNITY_2017_3
+-define:UNITY_2017
+-define:PLATFORM_ARCH_64
+-define:UNITY_64
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_GENERICS
+-define:ENABLE_PVR_GI
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_GRID
+-define:ENABLE_TILEMAP
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_DIRECTOR
+-define:ENABLE_UNET
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_HUB
+-define:ENABLE_EDITOR_HUB_LICENSE
+-define:ENABLE_WEBSOCKET_CLIENT
+-define:ENABLE_DIRECTOR_AUDIO
+-define:ENABLE_DIRECTOR_TEXTURE
+-define:ENABLE_TIMELINE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:ENABLE_NATIVE_ARRAY
+-define:ENABLE_SPRITE_MASKING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:ENABLE_MONO_BDWGC
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:INCLUDE_PUBNUB
+-define:ENABLE_PLAYMODE_TESTS_RUNNER
+-define:ENABLE_VIDEO
+-define:ENABLE_RMGUI
+-define:ENABLE_PACKMAN
+-define:ENABLE_CUSTOM_RENDER_TEXTURE
+-define:ENABLE_STYLE_SHEETS
+-define:ENABLE_LOCALIZATION
+-define:PLATFORM_STANDALONE_WIN
+-define:PLATFORM_STANDALONE
+-define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_EVENT_QUEUE
+-define:ENABLE_CLUSTERINPUT
+-define:ENABLE_VR
+-define:ENABLE_AR
+-define:ENABLE_WEBSOCKET_HOST
+-define:ENABLE_MONO
+-define:NET_2_0_SUBSET
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+-define:ENABLE_NATIVE_ARRAY_CHECKS
+-define:UNITY_TEAM_LICENSE
+Assets/Scripts/Assembly-CSharp/Actor.cs
+Assets/Scripts/Assembly-CSharp/Audio/AudioManager.cs
+Assets/Scripts/Assembly-CSharp/Audio/Sound.cs
+Assets/Scripts/Assembly-CSharp/Barrel.cs
+Assets/Scripts/Assembly-CSharp/Bounce.cs
+Assets/Scripts/Assembly-CSharp/Break.cs
+Assets/Scripts/Assembly-CSharp/Bullet.cs
+Assets/Scripts/Assembly-CSharp/Debug.cs
+Assets/Scripts/Assembly-CSharp/DestroyObject.cs
+Assets/Scripts/Assembly-CSharp/DetectWeapons.cs
+Assets/Scripts/Assembly-CSharp/Enemy.cs
+Assets/Scripts/Assembly-CSharp/Explosion.cs
+Assets/Scripts/Assembly-CSharp/ExplosiveBullet.cs
+Assets/Scripts/Assembly-CSharp/EZ_Camera_Shake/Demo/ShakeDemo.cs
+Assets/Scripts/Assembly-CSharp/EZCameraShake/CameraShakeInstance.cs
+Assets/Scripts/Assembly-CSharp/EZCameraShake/CameraShakePresets.cs
+Assets/Scripts/Assembly-CSharp/EZCameraShake/CameraShaker.cs
+Assets/Scripts/Assembly-CSharp/EZCameraShake/CameraUtilities.cs
+Assets/Scripts/Assembly-CSharp/Game.cs
+Assets/Scripts/Assembly-CSharp/GameState.cs
+Assets/Scripts/Assembly-CSharp/GE_ToggleFullScreenUI.cs
+Assets/Scripts/Assembly-CSharp/GE_UIResponder.cs
+Assets/Scripts/Assembly-CSharp/Glass.cs
+Assets/Scripts/Assembly-CSharp/Grappler.cs
+Assets/Scripts/Assembly-CSharp/Grappling.cs
+Assets/Scripts/Assembly-CSharp/Gun.cs
+Assets/Scripts/Assembly-CSharp/IPickup.cs
+Assets/Scripts/Assembly-CSharp/Lava.cs
+Assets/Scripts/Assembly-CSharp/Lobby.cs
+Assets/Scripts/Assembly-CSharp/MainCamera.cs
+Assets/Scripts/Assembly-CSharp/Managers.cs
+Assets/Scripts/Assembly-CSharp/MenuCamera.cs
+Assets/Scripts/Assembly-CSharp/Milk.cs
+Assets/Scripts/Assembly-CSharp/MoveCamera.cs
+Assets/Scripts/Assembly-CSharp/Movement.cs
+Assets/Scripts/Assembly-CSharp/Music.cs
+Assets/Scripts/Assembly-CSharp/NavTest.cs
+Assets/Scripts/Assembly-CSharp/Object.cs
+Assets/Scripts/Assembly-CSharp/Options.cs
+Assets/Scripts/Assembly-CSharp/Pickup.cs
+Assets/Scripts/Assembly-CSharp/PlayerAudio.cs
+Assets/Scripts/Assembly-CSharp/PlayerInput.cs
+Assets/Scripts/Assembly-CSharp/PlayerMovement.cs
+Assets/Scripts/Assembly-CSharp/PlayerSave.cs
+Assets/Scripts/Assembly-CSharp/PlayerScript.cs
+Assets/Scripts/Assembly-CSharp/PlayUI.cs
+Assets/Scripts/Assembly-CSharp/PrefabManager.cs
+Assets/Scripts/Assembly-CSharp/RagdollController.cs
+Assets/Scripts/Assembly-CSharp/RandomSfx.cs
+Assets/Scripts/Assembly-CSharp/RangedWeapon.cs
+Assets/Scripts/Assembly-CSharp/Respawn.cs
+Assets/Scripts/Assembly-CSharp/RotateObject.cs
+Assets/Scripts/Assembly-CSharp/SaveManager.cs
+Assets/Scripts/Assembly-CSharp/ShakeByDistance.cs
+Assets/Scripts/Assembly-CSharp/ShakeOnKeyPress.cs
+Assets/Scripts/Assembly-CSharp/ShakeOnTrigger.cs
+Assets/Scripts/Assembly-CSharp/SlowmoEffect.cs
+Assets/Scripts/Assembly-CSharp/StartPlayer.cs
+Assets/Scripts/Assembly-CSharp/TextureScaling.cs
+Assets/Scripts/Assembly-CSharp/Timer.cs
+Assets/Scripts/Assembly-CSharp/UIManger.cs
+Assets/Scripts/Assembly-CSharp/Weapon.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/AmbientOcclusion.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/AmbientOcclusionMode.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/AmbientOcclusionModeParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/AmbientOcclusionQuality.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/AmbientOcclusionQualityParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/AutoExposure.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/Bloom.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/BoolParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ChromaticAberration.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ColorBlindnessType.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ColorGrading.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ColorParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ColorUtilities.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/DebugOverlay.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/DepthOfField.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/DisplayNameAttribute.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/Dithering.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/EyeAdaptation.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/EyeAdaptationParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/FastApproximateAntialiasing.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/FloatParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/Fog.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/GradingMode.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/GradingModeParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/Grain.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/HableCurve.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/HaltonSeq.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/HistogramMonitor.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/IntParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/KernelSize.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/KernelSizeParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/LensDistortion.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/LightMeterMonitor.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/LogHistogram.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/MaxAttribute.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/MeshUtilities.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/MinAttribute.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/MinMaxAttribute.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/Monitor.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/MotionBlur.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/MultiScaleVO.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ParameterOverride.1.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ParameterOverride.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PostProcessAttribute.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PostProcessBundle.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PostProcessDebug.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PostProcessDebugLayer.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PostProcessEffectRenderer.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PostProcessEffectSettings.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PostProcessEvent.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PostProcessLayer.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PostProcessManager.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PostProcessProfile.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PostProcessRenderContext.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PostProcessResources.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PostProcessVolume.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PropertySheet.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/PropertySheetFactory.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/RuntimeUtilities.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ScalableAO.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ScreenSpaceReflectionPreset.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ScreenSpaceReflectionPresetParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ScreenSpaceReflectionResolution.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ScreenSpaceReflectionResolutionParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ScreenSpaceReflections.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/ShaderIDs.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/Spline.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/SplineParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/SubpixelMorphologicalAntialiasing.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/TargetPool.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/TemporalAntialiasing.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/TextureFormatUtilities.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/TextureLerper.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/TextureParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/TextureParameterDefault.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/Tonemapper.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/TonemapperParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/TrackballAttribute.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/Vector2Parameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/Vector4Parameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/VectorscopeMonitor.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/Vignette.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/VignetteMode.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/VignetteModeParameter.cs
+Assets/Scripts/Unity.Postprocessing.Runtime/UnityEngine/Rendering/PostProcessing/WaveformMonitor.cs
+Assets/Scripts/Unity.ProBuilder.KdTree/UnityEngine/ProBuilder/KdTree/Math/DoubleMath.cs
+Assets/Scripts/Unity.ProBuilder.KdTree/UnityEngine/ProBuilder/KdTree/Math/FloatMath.cs
+Assets/Scripts/Unity.ProBuilder.KdTree/UnityEngine/ProBuilder/KdTree/Math/TypeMath.1.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/AdvancingFront.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/AdvancingFrontNode.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/ConstrainedPointSet.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/DelaunayTriangle.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/DTSweep.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/DTSweepBasin.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/DTSweepConstraint.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/DTSweepContext.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/DTSweepDebugContext.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/DTSweepEdgeEvent.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/DTSweepPointComparator.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/P2T.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/PointGenerator.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/PointOnEdgeException.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/PointSet.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/Polygon.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/PolygonGenerator.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/PolygonPoint.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/PolygonSet.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/TriangulationConstraint.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/TriangulationContext.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/TriangulationDebugContext.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/TriangulationPoint.cs
+Assets/Scripts/Unity.ProBuilder.Poly2Tri/UnityEngine/ProBuilder/Poly2Tri/TriangulationUtil.cs
+Assets/Scripts/Unity.ProBuilder.Stl/UnityEngine/ProBuilder/Stl/pb_Stl.cs
+Assets/Scripts/Unity.ProBuilder.Stl/UnityEngine/ProBuilder/Stl/pb_Stl_Exporter.cs
+Assets/Scripts/Unity.ProBuilder.Stl/UnityEngine/ProBuilder/Stl/pb_Stl_Importer.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/ActionResult.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/ArrayUtility.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/AutoUnwrapSettings.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/BezierPoint.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/BezierShape.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Bounds2D.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/BuiltinMaterials.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Changelog.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/ChangelogEntry.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Clipping.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/ColliderBehaviour.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/ColorPalette.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/ColorUtility.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/CSG_Vertex.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Edge.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/EdgeUtility.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Entity.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/EntityBehaviour.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/EntityType.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Experimental/CSG/CSG.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Experimental/CSG/CSG_Model.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Experimental/CSG/CSG_Node.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Experimental/CSG/CSG_Plane.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Experimental/CSG/CSG_Polygon.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Experimental/CSG/CSG_VertexUtility.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Face.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/FaceRebuildData.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/HandleConstraint2D.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/HandleUtility.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/InternalUtility.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Log.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MaterialUtility.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Math.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshArrays.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshHandle.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshHandles.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/AppendElements.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/Bevel.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/CombineMeshes.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/ConnectElements.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/DeleteElements.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/ElementSelection.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/ExtrudeElements.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/InternalMeshUtility.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/MergeElements.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/MeshImporter.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/MeshTransform.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/Subdivision.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/SurfaceTopology.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/Triangulation.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/UVEditing.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshOperations/VertexEditing.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/MeshUtility.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Normals.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/PolyShape.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/PreferenceDictionary.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/PreferenceKeys.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/ProBuilderMesh.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Projection.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/RaycastHit.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/SelectionPicker.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/SelectionPickerRenderer.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/SemVer.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/ShapeGenerator.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/SharedVertex.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Smoothing.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Snapping.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Spline.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Submesh.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Transform2D.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/TransformUtility.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/TriggerBehaviour.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/UnwrapParameters.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/UvUnwrapping.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/VectorHash.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Version.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/Vertex.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/VertexPositioning.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/WingedEdge.cs
+Assets/Scripts/Unity.ProBuilder/UnityEngine/ProBuilder/WingedEdgeEnumerator.cs
+Assets/Scripts/Unity.ProGrids/UnityEngine/ProGrids/IgnoreSnap.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/AtlasPopulationMode.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/ColorMode.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/FaceInfo_Legacy.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/FastAction.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/FontAssetCreationSettings.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/FontFeatureLookupFlags.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/FontStyles.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/FontWeight.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/GlyphValueRecord_Legacy.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/KerningPair.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/KerningTable.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/MaskingTypes.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/MaterialReferenceManager.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TextAlignmentOptions.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TextContainer.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TextContainerAnchors.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TextElementType.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TextMeshPro.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TextMeshProUGUI.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TextOverflowModes.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TextureMappingOptions.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_Asset.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_Character.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_ColorGradient.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_DefaultControls.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_Dropdown.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_FontAsset.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_FontAssetUtilities.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_FontFeatureTable.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_FontWeightPair.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_Glyph.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_GlyphAdjustmentRecord.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_GlyphPairAdjustmentRecord.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_GlyphValueRecord.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_InputField.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_InputValidator.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_MaterialManager.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_ScrollbarEventHandler.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_SelectionCaret.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_Settings.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_Sprite.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_SpriteAnimator.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_SpriteAsset.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_SpriteCharacter.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_SpriteGlyph.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_Style.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_StyleSheet.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_SubMesh.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_SubMeshUI.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_Text.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_TextElement.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_TextElement_Legacy.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_TextInfo.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_TextParsingUtilities.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_TextUtilities.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMP_UpdateManager.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMPro_EventManager.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/TMPro_ExtensionMethods.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/VertexGradient.cs
+Assets/Scripts/Unity.TextMeshPro/TMPro/VertexSortingOrder.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/ActivationControlPlayable.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/ActivationMixerPlayable.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/ActivationPlayableAsset.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/ActivationTrack.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/AnimationOutputWeightProcessor.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/AnimationPlayableAsset.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/AnimationTrack.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/AudioClipProperties.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/AudioMixerProperties.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/AudioPlayableAsset.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/AudioTrack.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/ControlPlayableAsset.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/ControlTrack.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/CustomSignalEventDrawer.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/DirectorControlPlayable.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/Extrapolation.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/GroupTrack.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/HashUtility.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/InfiniteRuntimeClip.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/Marker.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/MarkerList.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/MarkerTrack.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/MatchTargetFields.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/NotificationUtilities.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/ParticleControlPlayable.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/PlayableTrack.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/PrefabControlPlayable.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/RuntimeClip.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/RuntimeClipBase.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/RuntimeElement.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/ScheduleRuntimeClip.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/SignalAsset.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/SignalEmitter.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/SignalReceiver.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/SignalTrack.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/TimeControlPlayable.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/TimelineAsset.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/TimelineClip.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/TimelineCreateUtilities.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/TimelinePlayable.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/TimelineUndo.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/TimeNotificationBehaviour.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/TimeUtility.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/TrackAsset.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/TrackColorAttribute.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/TrackOffset.cs
+Assets/Scripts/Unity.Timeline/UnityEngine/Timeline/WeightUtility.cs
+-r:"C:\karan\unity editor folder\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"
+-r:"C:\karan\unity editor folder\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll"
+-r:"C:\karan\unity editor folder\Editor\Data\Mono\lib\mono\unity\UnityScript.dll"
+-r:"C:\karan\unity editor folder\Editor\Data\Mono\lib\mono\unity\UnityScript.Lang.dll"
+-r:"C:\karan\unity editor folder\Editor\Data\Mono\lib\mono\unity\Boo.Lang.dll"
+-sdk:unity
