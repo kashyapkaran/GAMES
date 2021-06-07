@@ -1,3 +1,1 @@
-dog='good dog'
-
-print(dog)
+print()

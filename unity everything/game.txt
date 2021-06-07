@@ -1,0 +1,13 @@
+Enviroment : Castle
+Goal : capture the treasure
+Genre : arcade/pixel art style
+rules : must not be seen
+wild card : fruit(banana peels?)
+
+
+
+player = square
+spikes 
+enimies 
+moving enimies
+double jump
